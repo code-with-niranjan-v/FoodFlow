@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.SignInFragment">
+
+    <?xml version="1.0" encoding="utf-8"?>
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".ui.fragments.SignUpFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:elevation="8dp"
+                app:layout_constraintVertical_chainStyle="packed"
+                android:id="@+id/topCard"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <TextView
+                    app:layout_constraintVertical_chainStyle="packed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Log In to Your Account"
+                    android:textColor="@color/dark_green"
+                    android:padding="12dp"
+                    app:layout_constraintVertical_bias="0.4"
+                    app:layout_constraintBottom_toTopOf="@+id/etEmail"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:id="@+id/tvCreate"
+                    android:textSize="24sp"/>
+
+                <EditText
+                    app:layout_constraintVertical_chainStyle="packed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/tvCreate"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:padding="18dp"
+                    android:layout_margin="12dp"
+                    android:hint="Email"
+                    app:layout_constraintBottom_toTopOf="@id/etPassword"
+                    android:textColor="@color/dark_green"
+                    android:textColorHint="@color/dark_green"
+                    android:id="@+id/etEmail"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+                <EditText
+                    app:layout_constraintVertical_chainStyle="packed"
+                    android:textColor="@color/dark_green"
+                    android:textColorHint="@color/dark_green"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/etEmail"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:padding="18dp"
+                    android:id="@+id/etPassword"
+                    android:layout_margin="12dp"
+                    app:layout_constraintBottom_toTopOf="@id/btnSubmit"
+                    android:hint="Password"
+
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+                <Button
+                    app:layout_constraintVertical_chainStyle="packed"
+                    app:layout_constraintBottom_toTopOf="@+id/tvAlready"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/etPassword"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:padding="18dp"
+                    android:layout_margin="12dp"
+                    android:textColor="@color/dark_green"
+                    android:text="Submit"
+                    android:backgroundTint="@color/light_green_200"
+                    android:id="@+id/btnSubmit"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tvAlready"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:textSize="18sp"
+                    android:textColor="@color/dark_green"
+                    app:layout_constraintVertical_chainStyle="packed"
+                    app:layout_constraintTop_toBottomOf="@id/btnSubmit"
+                    android:paddingBottom="10dp"
+                    android:text="Already have an account? Log in"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+</FrameLayout>

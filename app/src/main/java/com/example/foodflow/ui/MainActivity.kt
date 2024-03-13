@@ -1,7 +1,8 @@
-package com.example.foodflow
+package com.example.foodflow.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.foodflow.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.AddFoodItemsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.TextInputEditText.FilledBox"
+            android:hint="Food Name"
+            android:textColor="@color/dark_green"
+            android:textSize="18sp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:padding="12dp"
+            android:id="@+id/etFoodName"
+            android:layout_margin="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.TextInputEditText.FilledBox"
+            android:hint="Quantity in grams"
+            android:textColor="@color/dark_green"
+            android:textSize="18sp"
+            android:padding="12dp"
+            android:id="@+id/etFoodQuantity"
+            app:layout_constraintTop_toBottomOf="@id/etFoodName"
+            android:layout_margin="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.TextInputEditText.FilledBox"
+            android:hint="Time"
+            android:textColor="@color/dark_green"
+            android:textSize="18sp"
+            android:padding="12dp"
+            android:inputType="datetime"
+            android:id="@+id/etFoodDate"
+            app:layout_constraintTop_toBottomOf="@id/etFoodQuantity"
+            android:layout_margin="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            style="@style/Widget.Material3.TextInputEditText.FilledBox"
+            android:hint="Description"
+            android:textColor="@color/dark_green"
+            android:textSize="18sp"
+            android:gravity="start"
+            android:padding="12dp"
+            app:layout_constraintBottom_toTopOf="@id/btnPhoto"
+            android:inputType="datetime"
+            android:id="@+id/etFoodDescription"
+            app:layout_constraintTop_toBottomOf="@id/etFoodDate"
+            android:layout_margin="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Photo"
+            android:textSize="20sp"
+            android:textColor="@color/dark_green"
+            android:id="@+id/btnPhoto"
+            android:padding="12dp"
+            android:layout_margin="12dp"
+            style="@style/Widget.Material3.Button.TextButton"
+            app:layout_constraintBottom_toTopOf="@+id/btnSubmit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:padding="12dp"
+            android:layout_margin="12dp"
+            android:textSize="20sp"
+            android:textColor="@color/dark_green"
+            android:id="@+id/btnSubmit"
+            style="@style/Widget.Material3.Button.TextButton"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+        
+        
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
