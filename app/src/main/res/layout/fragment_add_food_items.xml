@@ -52,6 +52,32 @@
             android:layout_margin="12dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.TextInputEditText.FilledBox"
+            android:hint="City"
+            android:textColor="@color/dark_green"
+            android:textSize="18sp"
+            android:padding="12dp"
+            android:id="@+id/etFoodCity"
+            app:layout_constraintTop_toBottomOf="@id/etFoodDate"
+            android:layout_margin="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.TextInputEditText.FilledBox"
+            android:hint="Google Map link"
+            android:textColor="@color/dark_green"
+            android:textSize="18sp"
+            android:padding="12dp"
+            android:id="@+id/etFoodLocation"
+            app:layout_constraintTop_toBottomOf="@id/etFoodCity"
+            android:layout_margin="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
         <EditText
             android:layout_width="0dp"
@@ -63,9 +89,8 @@
             android:gravity="start"
             android:padding="12dp"
             app:layout_constraintBottom_toTopOf="@id/btnPhoto"
-            android:inputType="datetime"
             android:id="@+id/etFoodDescription"
-            app:layout_constraintTop_toBottomOf="@id/etFoodDate"
+            app:layout_constraintTop_toBottomOf="@id/etFoodLocation"
             android:layout_margin="12dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
