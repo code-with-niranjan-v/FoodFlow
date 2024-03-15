@@ -15,7 +15,6 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:elevation="8dp"
             android:id="@+id/topCard"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -27,20 +26,67 @@
                 android:text="Create an Account"
                 android:textColor="@color/dark_green"
                 android:padding="12dp"
-                app:layout_constraintBottom_toTopOf="@+id/etEmail"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 android:id="@+id/tvCreate"
                 android:textSize="24sp"/>
-
             <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@id/tvCreate"
                 app:layout_constraintStart_toStartOf="parent"
-                android:padding="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:hint="Name"
+                app:layout_constraintBottom_toTopOf="@id/etCharityName"
+                android:id="@+id/etName"
+                android:textColor="@color/dark_green"
+                android:textColorHint="@color/dark_green"
+                android:padding="12dp"
+                android:layout_margin="12dp"/>
+
+
+            <EditText
+                app:layout_constraintTop_toBottomOf="@id/etName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:hint="Charity Name(if Any)"
+                android:id="@+id/etCharityName"
+                android:textColor="@color/dark_green"
+                android:textColorHint="@color/dark_green"
+                android:padding="12dp"
+                app:layout_constraintBottom_toTopOf="@id/etCityName"
+                android:layout_margin="12dp"/>
+
+            <EditText
+                app:layout_constraintTop_toBottomOf="@id/etCharityName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:hint="City Name"
+                app:layout_constraintBottom_toTopOf="@id/etEmail"
+                android:id="@+id/etCityName"
+                android:textColor="@color/dark_green"
+                android:textColorHint="@color/dark_green"
+                android:padding="12dp"
+                android:layout_margin="12dp"/>
+
+
+
+            <EditText
+                app:layout_constraintTop_toBottomOf="@id/etCityName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                android:padding="12dp"
                 android:layout_margin="12dp"
                 android:hint="Email"
+                android:textSize="18sp"
                 android:textColor="@color/dark_green"
                 android:textColorHint="@color/dark_green"
                 app:layout_constraintBottom_toTopOf="@+id/etPhoneNumber"
@@ -48,13 +94,14 @@
                 app:layout_constraintEnd_toEndOf="parent"/>
 
             <EditText
+                android:textSize="18sp"
                 android:textColor="@color/dark_green"
                 android:textColorHint="@color/dark_green"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@id/etEmail"
                 app:layout_constraintStart_toStartOf="parent"
-                android:padding="18dp"
+                android:padding="12dp"
                 android:id="@+id/etPhoneNumber"
                 android:layout_margin="12dp"
                 android:hint="Phone Number"
@@ -62,13 +109,14 @@
                 app:layout_constraintEnd_toEndOf="parent"/>
 
             <EditText
+                android:textSize="18sp"
                 android:textColor="@color/dark_green"
                 android:textColorHint="@color/dark_green"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@id/etPhoneNumber"
                 app:layout_constraintStart_toStartOf="parent"
-                android:padding="18dp"
+                android:padding="12dp"
                 android:id="@+id/etPassword"
                 android:layout_margin="12dp"
                 android:hint="Password"
@@ -76,13 +124,14 @@
                 app:layout_constraintEnd_toEndOf="parent"/>
 
             <EditText
+                android:textSize="18sp"
                 android:textColor="@color/dark_green"
                 android:textColorHint="@color/dark_green"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@id/etPassword"
                 app:layout_constraintStart_toStartOf="parent"
-                android:padding="18dp"
+                android:padding="12dp"
                 android:inputType="textPassword"
                 android:layout_margin="12dp"
                 android:hint="Confirm Password"

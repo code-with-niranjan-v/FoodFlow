@@ -1,6 +1,7 @@
 package com.example.foodflow.di
 
 import com.example.foodflow.firebase.FoodFirebaseDatabase
+import com.example.foodflow.repository.FoodItemsRepository
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -34,5 +35,9 @@ object Module {
     @Provides
     @Singleton
     fun provideFoodFireBase(firebaseAuth: FirebaseAuth, firebaseFireStore: FirebaseFirestore, firebaseStorage: FirebaseStorage):FoodFirebaseDatabase = FoodFirebaseDatabase(firebaseAuth,firebaseFireStore,firebaseStorage)
+
+    @Provides
+    @Singleton
+    fun provideItemsRepo(firebaseDatabase: FoodFirebaseDatabase):FoodItemsRepository = FoodItemsRepository(firebaseDatabase)
 
 }

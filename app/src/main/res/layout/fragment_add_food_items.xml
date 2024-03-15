@@ -42,11 +42,11 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             style="@style/Widget.Material3.TextInputEditText.FilledBox"
-            android:hint="Time"
+            android:hint="Date (dd-mm-yyyy)"
             android:textColor="@color/dark_green"
             android:textSize="18sp"
             android:padding="12dp"
-            android:inputType="datetime"
+            android:inputType="time"
             android:id="@+id/etFoodDate"
             app:layout_constraintTop_toBottomOf="@id/etFoodQuantity"
             android:layout_margin="12dp"
@@ -81,6 +81,20 @@
 
         <EditText
             android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.TextInputEditText.FilledBox"
+            android:hint="Time Of Preparation"
+            android:textColor="@color/dark_green"
+            android:textSize="18sp"
+            android:padding="12dp"
+            android:id="@+id/etFoodTime"
+            app:layout_constraintTop_toBottomOf="@id/etFoodLocation"
+            android:layout_margin="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <EditText
+            android:layout_width="0dp"
             android:layout_height="0dp"
             style="@style/Widget.Material3.TextInputEditText.FilledBox"
             android:hint="Description"
@@ -90,7 +104,7 @@
             android:padding="12dp"
             app:layout_constraintBottom_toTopOf="@id/btnPhoto"
             android:id="@+id/etFoodDescription"
-            app:layout_constraintTop_toBottomOf="@id/etFoodLocation"
+            app:layout_constraintTop_toBottomOf="@id/etFoodTime"
             android:layout_margin="12dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>

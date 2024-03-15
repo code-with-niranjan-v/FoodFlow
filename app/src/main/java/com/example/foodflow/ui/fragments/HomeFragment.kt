@@ -5,18 +5,21 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.foodflow.R
 import com.example.foodflow.databinding.FragmentHomeBinding
 import com.example.foodflow.models.FoodItem
 import com.example.foodflow.ui.fragments.utils.FoodItemsAdapter
+import com.example.foodflow.viewmodel.FoodItemViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class HomeFragment : Fragment() {
 
     private lateinit var homeBinding: FragmentHomeBinding
+    private val foodItemViewModel:FoodItemViewModel by viewModels()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -30,6 +33,14 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         homeBinding.btnDonateFood.setOnClickListener{
             findNavController().navigate(R.id.action_homeFragment_to_addFoodItemsFragment)
+        }
+
+        foodItemViewModel.loadFoodItems()
+
+        foodItemViewModel.getFoodItems().observe(viewLifecycleOwner){
+            val adapter = FoodItemsAdapter(listOfItems = it, context = requireContext())
+            homeBinding.rvFoodItems.layoutManager = LinearLayoutManager(requireContext())
+            homeBinding.rvFoodItems.adapter = adapter
         }
 
         val indianFoodItems = listOf(
@@ -80,9 +91,7 @@ class HomeFragment : Fragment() {
             )
         )
 
-        val adapter = FoodItemsAdapter(listOfItems = indianFoodItems, context = requireContext())
-        homeBinding.rvFoodItems.layoutManager = LinearLayoutManager(requireContext())
-        homeBinding.rvFoodItems.adapter = adapter
+
     }
 
 
